@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>popup3</title>
+<neta charset="UTF-8">
+<style>
+#div5
+{
+margin-left:25%;
+margin-top:15%;
+width:700px;
+height:300px;
+border:4px solid grey;
+background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg');
+}
+
+.timeradio
+{
+margin-left:150px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="div5">
+<p style="margin-left:5%;font-size:20px;color:#ffffcc;float:left;"><b>CHOOSE DELIVERY TIME*</b></p>
+<p style="color:#ffffcc;text-align:right;margin-right:5%" onclick="overlay2_off()">close</p>
+<br/>
+<table>
+<tr>
+<td><input class="timeradio" type="radio" name="r1" checked="checked" onclick="not_show()"><label style="color:white;font-size:20px;"><b>Deliver Now</b></label></input></td>
+<td><input class="timeradio" type="radio" name="r1" onclick="show_time()"><label style="color:white;font-size:20px;"><b>Deliver Later</b></label></input></td>
+</tr>
+</table>
+<p id="p1" style="color:#ffffcc;text-align:center;"><b>Delivery will be done within half an hour.</b></p>
+
+<div id="div6" style="display:none;">
+<br/>
+<center><label style="color:#ffffcc;">Choose time:</label>
+<select name="time">
+  <option value="18:00">18:00</option>
+  <option value="19:00">19:00</option>
+  <option value="20:00">20:00</option>
+  <option value="21:00">21:00</option>
+  <option value="22:00">22:00</option>
+</select></center>
+</div>
+
+<br/>
+
+<center><button type="button" onclick="" style="padding:10px;font-size:15px;background-color:red;border:none;color:white;"><b>Continue</b></button></center>
+<br/>
+<h5 style="color:grey;text-align:center;">*T&C: The delivery time displayed is indicative only & depends on the time of order completion.</h5>
+
+</div>
+
+<script>
+
+function show_time()
+{
+document.getElementById("div6").style.display="block";
+document.getElementById("p1").style.display="none";
+}
+
+function not_show()
+{
+document.getElementById("p1").style.display="block";
+document.getElementById("div6").style.display="none";
+}
+
+</script>
+
+</body>
+</html>

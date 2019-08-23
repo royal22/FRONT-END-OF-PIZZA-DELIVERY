@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+<title>Pranzo Pizza-Online Ordering,Dining,Take-Away,Pizza Restaurant India</title>
+
+<link rel="stylesheet" type="text/css" href="popup.css">
+
+<style>
+body{
+margin-left:155px;
+margin-right:155px;
+}
+
+.mySlides{display:none;}
+
+nav {override:hidden;margin:auto;position:sticky;top:0;z-index:2;
+}
+nav a {float:left;display:block;width:10.6%;background-color:red;color:white;font-size:20px;padding:16px;text-decoration: none;text-align:center;border-right:0.5px solid black;
+}
+nav a:hover{background-color:white;color:black;
+}
+nav #n2:hover{background-color:white;color:black;
+}
+nav a:active{background-color:white;color:black;
+}
+nav #n2:active{background-color:white;color:black;
+}
+nav #n1{border-radius:10px 0px 0px 10px;width:10.6%;
+}
+nav #n2{background-color:yellow;width:29%;color:black;padding:16px;font-size:20px;border-radius:0px 10px 10px 0px;
+}
+
+@media(max-width:1200px){
+nav a,nav #n2,nav #n1,.dropdown{width:100%;border-bottom:0.5px solid black;}
+#img1{width:100%;}
+}
+
+#table1 td
+{
+color:white;
+width:250px;
+}
+#table1 .heading
+{
+color:grey;
+}
+#table1 td a
+{
+color:white;
+text-decoration:none;
+}
+
+</style>
+<head>
+
+<body style="background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg')">
+
+<div id="overlay">
+<div id="popupbox" class="acd" style="border:4px solid grey;background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg')"> 
+<ul style="list-style-type:none;">
+<a id="login" href="javascript:login('show');"><li class="l1">LOGIN</li></a>
+<a id="login" href="javascript:signup('show');"><l class="l2">SIGN UP</li></a>
+<ul>
+<br />
+<div class="imgcontainer">
+<img src="avatar.jpg" alt="Avatar" class="avatar">
+</div>
+<br />
+<div id="c"> 
+<form name="login" action="" method="post">
+<label style="color:white;"><b>Username:</b></label>
+ <input class="text" type="text" placeholder="Enter Username" name="uname" required>
+<label style="color:white;"><b>Password:</b></label>
+<input class="text" type="password" placeholder="Enter Password" name="psw" required>
+
+<input type="checkbox" checked="checked"><label style="color:white;">Remember me</label><br />	
+<br />
+</div>
+<input id="a" type="submit" name="submit" value="login" style="margin-left:0px;"/>
+</form>
+
+<a style="margin-right:40px;" href="javascript:login('hide');"><input id="b" type="button" value="close"></a> 
+</div>
+
+<!-- sign up-->
+<div id="sign" class="acd" style="border:4px solid grey;background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg')">
+<ul style="list-style-type:none;">
+<a id="login" href="javascript:login('show');"><li class="l1">LOGIN</li></a>
+<a id="login" href="javascript:signup('show');"><l class="l2">SIGN UP</li></a>
+<ul>
+<br />
+
+<div style="height:340px;width:250px; margin-left:-55px;">
+<form>
+<b style="color:white;">NAME</b>
+<input class="text" type="text" placeholder="First Name" required>
+<b style="color:white;">LAST NAME</b>
+<input class="text" type="text" placeholder="Last Name" required>
+<b style="color:white;">USERNAME</b>
+<input class="text" type="text" placeholder="Username" required>
+<b style="color:white;">PASSWORD</b>
+<input class="text" type="Password" placeholder="Atleast 6 characters" required>
+<br />
+<input type="radio" name="gender" checked="checked"><label style="color:white;">Male</label></input>
+<input type="radio" name="gender"><label style="color:white;">Female</label</input>
+
+</div>
+<input id="bcd" type="submit" name="submit" value="Sign up"/>
+</form>
+<a  href="javascript:login('hide');"><input id="b" type="button" value="close"></a> 
+
+
+</div>
+
+</div>
+
+<div id="overlay2">
+<div id="div1">
+<br/>
+<br/>
+<br/>
+<center><table id="table2"></center>
+<tr>
+<td id="d1_1" class="d1" onclick="delivery()" style="background-color:red;color:white;">Delivery</td>
+<td id="d1_2" class="d1" onclick="pickup()">Pick Up</td>
+</tr>
+</table>
+<br/><br/>
+<label style="color:#ffffcc;font-size:20px;">In </label><input type="text" list="cities" style="padding:10px;margin-right:10px;" placeholder="Enter your city"/>
+<datalist id="cities">
+<option value="Agra">
+<option value="Bangalore">
+<option value="Chennai">
+<option value="Delhi">
+<option value="Hyderabad">
+<option value="Kolkata">
+<option value="Mumbai">
+<option value="Patna">
+<option value="Pune">
+<option value="Vizag">
+</datalist>
+
+<label style="color:#ffffcc;font-size:20px;">At </label><input type="text" style="padding:10px;margin-right:10px;" placeholder="Enter your locality"/>
+<button type="button" onclick="overlay3_on()" style="padding:10px;font-size:15px;background-color:red;border:none;color:white;">Continue</button>
+<br/>
+<div id="div2">
+<center><p style="color:#ffffcc;font-size:25px;">OR</p></center>
+<label style="color:#ffffcc;font-size:15px;">Zipper Code </label><input style="padding:8px;" type="tel" placeholder="Enter zip code"/> 
+<button type="button" onclick="overlay3_on()" style="padding:7px;font-size:15px;background-color:red;border:none;color:white;">Submit</button>
+<br/>
+</div>
+<br/>
+
+<table id="table3">
+<tr>
+<td id="d2_1" class="d2"><a href="javascript:change_overlay_to_login()">login</a></td>
+<td id="d2_2" class="d2"><a href="javascript:change_overlay_to_signup()">sign up</a></td>
+<td id="d2_3" class="d2"><a href="javascript:overlay2_off()">close</a></td>
+</tr>
+</table>
+</div>
+
+<div id="div5">
+<p style="margin-left:5%;font-size:20px;color:#ffffcc;float:left;"><b>CHOOSE DELIVERY TIME*</b></p>
+<p style="color:#ffffcc;text-align:right;margin-right:5%" onclick="overlay2_off()">close</p>
+<br/>
+<table>
+<tr>
+<td><input class="timeradio" type="radio" name="r1" checked="checked" onclick="not_show()"><label style="color:white;font-size:20px;"><b>Deliver Now</b></label></input></td>
+<td><input class="timeradio" type="radio" name="r1" onclick="show_time()"><label style="color:white;font-size:20px;"><b>Deliver Later</b></label></input></td>
+</tr>
+</table>
+<p id="p1" style="color:#ffffcc;text-align:center;"><b>Delivery will be done within half an hour.</b></p>
+
+<div id="div6" style="display:none;">
+<br/>
+<center><label style="color:#ffffcc;">Choose time:</label>
+<select name="time">
+  <option value="18:00">18:00</option>
+  <option value="19:00">19:00</option>
+  <option value="20:00">20:00</option>
+  <option value="21:00">21:00</option>
+  <option value="22:00">22:00</option>
+</select></center>
+</div>
+
+<br/>
+
+<center><button type="button" onclick="change_overlay_to_login()" style="padding:10px;font-size:15px;background-color:red;border:none;color:white;"><b>Continue</b></button></center>
+<br/>
+<h5 style="color:grey;text-align:center;">*T&C: The delivery time displayed is indicative only & depends on the time of order completion.</h5>
+
+</div>
+
+</div>
+
+
+<div style="margin-left:10px;">
+<img src="images.jpg" alt="image" width="50px" heigth="50px" style="display:inline;"/>
+<p style="color:white;margin-left:10px;font-size:35px;display:inline;"><b><i>Pranzo Pizza</i></b></p>
+<a href="feedback.html" target="_blank"><img src="feedback.png" style="margin-left:400px;margin-top:10px;" alt="image"/></a>
+<img src="call.png" style="margin-left:4px;" alt="image"/>
+<a href="homepage.html"><img src="logout.png" style="" alt="image"width="95px" heigth="100px" onclick="overlay_on()"/></a>
+</div><br/>
+
+<nav>
+  <a id="n1" href="home_cart.html">HOME</a>
+  <a href="pizza_menu.html">PIZZA</a>
+  <a href="sides.html">SIDES</a>
+  <a href="meals.html">MEALS</a>
+  <div class="dropdown">
+  MORE
+  <div class="dropdown-content">
+  	<a href="drinks.html">DRINKS</a>
+  	<a href="desserts.html">DESSERTS</a>
+  	<a href="magic_pan.html">MAGIC PAN</a>
+  </div>
+  </div>
+  <a id="n2" href="cart.html"><b>MY CART</b></a>
+</nav><br/><br/>
+
+
+<div class="w3-content w3-section" style="max-width:1120px;">
+<a id="n2" href="javascript:overlay2_on()"><img class="mySlides" src="sliderpizza1.jpg" style="width:100%;height:400px"></a>
+<a id="n2" href="javascript:overlay2_on()"><img class="mySlides" src="1.png" style="width:100%;height:400px"></a>
+<a id="n2" href="javascript:overlay2_on()"><img class="mySlides" src="2.png" style="width:100%;height:400px"></a>
+<a id="n2" href="javascript:overlay2_on()"><img class="mySlides" src="slider4.jpg" style="width:100%;height:400px"></a>
+<a id="n2" href="javascript:overlay2_on()"><img class="mySlides" src="slide_image.png" style="width:100%;height:400px"></a>
+</div>
+<br/>
+
+
+<a href="meals.html"><img src="side1.png" alt="image" style="opacity:0.8;" width="550px" height="250px"/></a>
+<a href="meals.html" style="margin-left:16px;"><img src="side2.png" style="opacity:0.8;" alt="image" width="550px" height="250px"/></a>
+</div>
+<br/><br/><hr/><br/><br/>
+
+<div id="table1">
+<center><table></center>
+<tr>
+<td class="heading">Order</td>
+<td class="heading">Pranzo Pizza IN India</td>
+<td class="heading">Cities</td>
+<td class="heading">Connect with us</td>
+<td class="heading">Follow us</td>
+</tr>
+<tr>
+<td><a href="pizza_menu.html">Pizza</a></td>
+<td><a href="about.html">About Us</a></td>
+<td>Bengaluru</td>
+<td><a href="feedback.html" target="_blank">Feedback</a></td>
+<td><a href="https://www.facebook.com/Pizza-Pranzo-273146652781192/" target="_blank"><img src="fblogo.jpg" alt="image" heigth="36" width="36"></a>
+<a href="https://twitter.com/" target="_blank"><img src="Twitter-icon.png" style="margin-left:10px;" alt="image" heigth="38" width="38"></a>
+<a href="https://www.youtube.com/channel/UCnJVveKyEpRhNNAjLd3icDg" target="_blank"><img src="MetroUI-YouTube-Alt-icon.png" style="margin-left:8px;" alt="image" heigth="44" width="44"></a></td>
+</tr>
+<tr>
+<td><a href="sides.html">Sides</a></td>
+<td><a href="#">Nutrition</a></td>
+<td>Mumbai</td>
+<td><a href="#">Tollfree No.</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="meals.html">Meals</a></td>
+<td></td>
+<td>Pune</td>
+<td></td>
+<td class="heading">Download Pranzo Pizza App</td>
+</tr>
+<tr>
+<td><a href="drinks.html">Drinks</a></td>
+<td class="heading">Policies</td>
+<td>Hyderabad</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="desserts.html">Desserts</a></td>
+<td><a href="terms.html">Terms & Conditions</td>
+<td>Chennai</td>
+<td></td>
+<td><a href="https://itunes.apple.com/in/app/pizza-hut-india/id886216816?mt=8" target="_blank"><img src="applestore.png" alt="image"></a></td>
+</tr>
+<tr>
+<td><a href="magic_pan.html">Magic pan<a/></td>
+<td></td>
+<td>Delhi</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Patna</td>
+<td></td>
+<td><a href="https://play.google.com/store/apps/details?id=com.Dominos&hl=en"  target="_blank"><img src="googleplay.png" alt="image"></a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Kolkata</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>In Your City</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</div>
+<br/>
+
+<br/><hr/><br/>
+
+<div style="text-align:center;color:grey;">
+<p style="color:white;">Copyright &copy Pranzo Pizza</p>
+<p>2017 Pranzo Pizza, Inc. All rights reserved. The Pranzo Pizza name, logos, and related marks are trademarks of Pranzo Pizza, Inc.
+Food shown are for illustration purpose only. Actual product may differ from the images shown in this website. Prices indicated above may vary from store to store.</p>
+<p style="color:white;">Order a delicious pizza on the go, anywhere, anytime. Pranzo Pizza is happy to assist you with your home delivery. Every time you order, you get a hot and fresh 
+pizza delivered at your doorstep in less than thirty minutes. *T&C Apply.
+Hurry up and place your order now!</p>
+
+</div><br/>
+
+
+<script src="popup.js"></script>
+
+<script type="text/javascript">
+
+var myIndex = 0;
+carousel();
+
+function carousel() 
+{
+	var i;
+	var x=document.getElementsByClassName("mySlides");
+
+	for(i=0;i<x.length;i++)
+	{
+		x[i].style.display = "none"; 
+	}
+ 	myIndex++;
+    if (myIndex > x.length) {myIndex = 1;}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+</script>
+
+</body>
+
+</html>

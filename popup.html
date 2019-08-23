@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>popup</title>
+<neta charset="UTF-8">
+
+<style>
+
+h1
+{
+margin-top:20%;
+text-align:center;
+}
+
+#overlay2
+{
+position:fixed;
+display:none;
+width:100%;
+height:100%;
+top:0;bottom:0;right:0;left:0;
+z-index:2;
+cursor:pointer;
+background-color:rgba(0,0,0,0.5);
+}
+
+#div1
+{
+margin-left:25%;
+margin-top:15%;
+width:700px;
+height:400px;
+border:4px solid grey;
+background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg');
+}
+
+
+#table1,.d1
+{
+background-color:white;
+}
+
+.d1
+{
+padding:15px;
+font-size:20px;
+color:black;
+text-align:center;
+}
+
+.d2
+{
+padding:20px;
+width:160px;
+text-align:center;
+}
+
+.d2 a
+{
+font-size:15px;
+color:#ffffcc;
+}
+
+#d2_1 a:hover
+{
+color:white;
+}
+
+#d2_2 a:hover
+{
+color:white;
+}
+
+#d2_3 a:hover
+{
+color:white;
+}
+
+#div5
+{
+margin-left:25%;
+margin-top:15%;
+width:700px;
+height:300px;
+border:4px solid grey;
+background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg');
+}
+
+.timeradio
+{
+margin-left:150px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div id="overlay2">
+<div id="div1">
+<br/>
+<br/>
+<br/>
+<center><table id="table1"></center>
+<tr>
+<td id="d1_1" class="d1" onclick="delivery()" style="background-color:red;color:white;">Delivery</td>
+<td id="d1_2" class="d1" onclick="pickup()">Pick Up</td>
+</tr>
+</table>
+<br/><br/>
+<label style="color:#ffffcc;font-size:20px;">In </label><input type="text" list="cities"  style="padding:10px;margin-right:10px;" placeholder="Enter your city"/>
+<datalist id="cities">
+<option value="Agra">
+<option value="Bangalore">
+<option value="Chennai">
+<option value="Delhi">
+<option value="Hyderabad">
+<option value="Kolkata">
+<option value="Mumbai">
+<option value="Patna">
+<option value="Pune">
+<option value="Vizag">
+</datalist>
+
+<label style="color:#ffffcc;font-size:20px;">At </label><input type="text"  style="padding:10px;margin-right:10px;" placeholder="Enter your locality"/>
+<button type="button" onclick="overlay3_on()" style="padding:10px;font-size:15px;background-color:red;border:none;color:#ffffcc;">Continue</button>
+<br/>
+<div id="div2">
+<center><p style="color:#ffffcc;font-size:25px;">OR</p></center>
+<label style="color:#ffffcc;font-size:15px;">Zipper Code </label><input style="padding:8px;" type="tel" placeholder="Enter zip code"/> 
+<button type="button" onclick="overlay3_on()" style="padding:7px;font-size:15px;background-color:red;border:none;color:#ffffcc;">Submit</button>
+<br/>
+</div>
+<br/>
+
+<table id="table2">
+<tr>
+<td id="d2_1" class="d2"><a href="#">login</a></td>
+<td id="d2_2" class="d2"><a href="#">sign up</a></td>
+<td id="d2_3" class="d2"><a href="javascript:overlay2_off()">close</a></td>
+</tr>
+</table>
+</div>
+
+<div id="div5">
+<p style="margin-left:5%;font-size:20px;color:#ffffcc;float:left;"><b>CHOOSE DELIVERY TIME*</b></p>
+<p style="color:#ffffcc;text-align:right;margin-right:5%" onclick="overlay2_off()">close</p>
+<br/>
+<table>
+<tr>
+<td><input class="timeradio" type="radio" name="r1" checked="checked" onclick="not_show()"><label style="color:white;font-size:20px;"><b>Deliver Now</b></label></input></td>
+<td><input class="timeradio" type="radio" name="r1" onclick="show_time()"><label style="color:white;font-size:20px;"><b>Deliver Later</b></label></input></td>
+</tr>
+</table>
+<p id="p1" style="color:#ffffcc;text-align:center;"><b>Delivery will be done within half an hour.</b></p>
+
+<div id="div6" style="display:none;">
+<br/>
+<center><label style="color:#ffffcc;">Choose time:</label>
+<select name="time">
+  <option value="18:00">18:00</option>
+  <option value="19:00">19:00</option>
+  <option value="20:00">20:00</option>
+  <option value="21:00">21:00</option>
+  <option value="22:00">22:00</option>
+</select></center>
+</div>
+
+<br/>
+
+<center><button type="button" onclick="" style="padding:10px;font-size:15px;background-color:red;border:none;color:white;"><b>Continue</b></button></center>
+<br/>
+<h5 style="color:grey;text-align:center;">*T&C: The delivery time displayed is indicative only & depends on the time of order completion.</h5>
+
+</div>
+
+</div>
+
+<h1 onclick="overlay2_on()">POPUP</h1>
+<script>
+
+function overlay2_on()
+{
+	document.getElementById("overlay2").style.display="block";
+	document.getElementById("div1").style.display="block";
+	document.getElementById("div5").style.display="none";
+}
+
+
+function overlay3_on()
+{
+	document.getElementById("overlay2").style.display="block";
+	document.getElementById("div1").style.display="none";
+	document.getElementById("div5").style.display="block";
+}
+
+function overlay2_off()
+{
+	document.getElementById("overlay2").style.display="none";
+}
+
+
+function pickup()
+{
+document.getElementById("div2").style.display="none";
+
+var a=document.getElementById("d1_1");
+a.style.backgroundColor="white";
+a.style.color="black";
+
+var b=document.getElementById("d1_2");
+b.style.backgroundColor="red";
+b.style.color="white";
+
+var c=document.getElementById("div1");
+c.style.height="300px";
+
+
+}
+
+function delivery()
+{
+document.getElementById("div2").style.display="block";
+
+var a=document.getElementById("d1_1");
+a.style.backgroundColor="red";
+a.style.color="white";
+
+var b=document.getElementById("d1_2");
+b.style.backgroundColor="white";
+b.style.color="black";
+
+var c=document.getElementById("div1");
+c.style.height="400px";
+
+}
+
+
+function show_time()
+{
+document.getElementById("div6").style.display="block";
+document.getElementById("p1").style.display="none";
+}
+
+function not_show()
+{
+document.getElementById("p1").style.display="block";
+document.getElementById("div6").style.display="none";
+}
+
+
+</script>
+
+</body>
+</html>

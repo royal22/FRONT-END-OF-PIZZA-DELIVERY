@@ -1,0 +1,154 @@
+<html>
+<script>
+var i=1;
+function air()
+{
+if(i==1)
+{
+var a=document.getElementById("div8");
+var b=document.createElement("table");
+b.setAttribute("id","rs");
+var c=document.createElement("tr");
+var d=document.createElement("td");
+var e=document.createElement("td");
+var f=document.createElement("td");
+var h=document.createElement("td");
+
+h.setAttribute("id","ro");
+f.setAttribute("id","rt");
+f.innerHTML=i;
+
+d.innerHTML="Double Cheese";
+e.innerHTML="545";
+h.innerHTML=545*i;
+i++;
+c.appendChild(d);
+c.appendChild(e);
+c.appendChild(f);
+c.appendChild(h);
+b.appendChild(c);
+
+
+   b.setAttribute("border", "2");
+a.appendChild(b);	
+}
+else
+{
+//i++;
+var id=document.getElementById("rt");
+//var f=document.createElement("td");
+id.innerHTML=i;
+var id1=document.getElementById("ro");
+id1.innerHTML=545*i;
+i++;
+}
+}
+
+var j=1;
+function bir()
+{
+if(j==1)
+{var a=document.getElementById("div8");
+var b=document.getElementById("rs");
+var c=document.createElement("tr");
+var d=document.createElement("td");
+var e=document.createElement("td");
+var f=document.createElement("td");
+var h=document.createElement("td");
+h.setAttribute("id","rp");
+f.setAttribute("id","ft");
+f.innerHTML=j;
+
+d.innerHTML="Garlic Bread Supreme";
+e.innerHTML="545";
+h.innerHTML=545*j;
+j++;
+c.appendChild(d);
+c.appendChild(e);
+c.appendChild(f);
+c.appendChild(h);
+b.appendChild(c);
+
+
+   b.setAttribute("border", "2");
+a.appendChild(b);	
+}
+else
+{
+//i++;
+var id=document.getElementById("ft");
+//var f=document.createElement("td");
+id.innerHTML=j;
+var id1=document.getElementById("rp");
+id1.innerHTML=545*j;
+j++;
+}
+}
+
+var k=1;
+function cir()
+{
+if(k==1)
+{var a=document.getElementById("div8");
+var b=document.getElementById("rs");
+var c=document.createElement("tr");
+var d=document.createElement("td");
+var e=document.createElement("td");
+var f=document.createElement("td");
+var h=document.createElement("td");
+h.setAttribute("id","dt");
+f.setAttribute("id","gt");
+f.innerHTML=j;
+
+d.innerHTML="Chicken Pepperoni";
+e.innerHTML="645";
+h.innerHTML=645*k;
+k++;
+c.appendChild(d);
+c.appendChild(e);
+c.appendChild(f);
+c.appendChild(h);
+b.appendChild(c);
+
+
+   b.setAttribute("border", "2");
+a.appendChild(b);	
+}
+else
+{
+//i++;
+var id=document.getElementById("dt");
+//var f=document.createElement("td");
+id.innerHTML=j;
+var id1=document.getElementById("gt");
+id1.innerHTML=645*k;
+k++;
+}
+}
+</script>
+<body>
+<form>
+
+
+</table>
+<tr>
+		<td><img id="a1" src="side_veg_1.png" style="width:350px;"></td>
+		<td><img id="a2" src="side_veg_2.png" style="width:350px;"></td>
+		<td><img id="a3" src="side_veg_3.png" style="width:350px;"></td>
+	</tr>
+<tr>
+		<td style="color:white;text-align:center;"><h2 id="a4">Cheese Garlic Bread</h2></td>
+		<td style="color:white;text-align:center;"><h2 id="a5">Garlic Bread Supreme</h2></td>
+		<td style="color:white;text-align:center;"><h2 id="a6">Garlic bread Sticks</h2></td>
+	</tr>
+<tr>
+		<td style="color:white;text-align:center;"><label id="a19" style="font-size:25px;">Rs.129 </label><input id="btn1" type="button" value="ADD TO CART" style="background-color:red;color:white;font-size:20px;" onclick="air()"/></td>
+		<td style="color:white;text-align:center;"><label id="a20" style="font-size:25px;">Rs.139 </label><input id="btn2" type="button" value="ADD TO CART" style="background-color:red;color:white;font-size:20px;" onclick="bir()"/></td>
+		<td style="color:white;text-align:center;"><label id="a21" style="font-size:25px;">Rs.129 </label><input id="btn3" type="button" value="ADD TO CART" style="background-color:red;color:white;font-size:20px;"/></td>
+	</tr>	
+</table>
+</form>
+<div style="border:1px solid black;height:20px;" id="q"></div>
+<body>
+
+</html>

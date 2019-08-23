@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+.acd {
+margin: 0; 
+margin-left: 40%; 
+margin-right: 40%;
+margin-top: 10%; 
+padding-top: 10px; 
+width: 300px; 
+height: 450px; 
+position: absolute; 
+border:1px solid black;
+background-color:white;
+z-index: 9; 
+font-family: arial; 
+visibility: hidden; 
+}
+
+#login
+{
+text-decoration:none;
+color:white;
+font-size:20px;
+}
+
+#login:hover
+{
+color:grey;
+}
+
+#a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    
+    border: none;
+    cursor: pointer;
+    
+	align:center;
+}
+
+#bcd {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    
+    border: none;
+    cursor: pointer;
+    margin-left:-7px;
+	
+}
+#a:hover {
+    opacity: 0.8;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#b {
+      background-color: rgb(196, 4, 4);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+#c
+{
+margin-left:-50px;
+width:250px;
+
+
+}
+
+.imgcontainer {
+    text-align: center;
+    margin-left:0px;
+	margin-right:60px;
+	
+	height:120px;
+    
+	
+}
+
+img.avatar {
+    width: 80%;
+    border-radius: 50%;
+}
+
+ul{list-style-type:none;}
+
+li{float:left;text-align:center;}
+
+.l1{
+width:50%;
+}
+
+.l2{
+width:50%;
+}
+
+
+</style>
+<script language="JavaScript" type="text/javascript">
+function login(showhide){
+if(showhide == "show"){
+    document.getElementById('popupbox').style.visibility="visible";
+	document.getElementById('sign').style.visibility="hidden";
+}else if(showhide == "hide"){
+    document.getElementById('popupbox').style.visibility="hidden";
+    document.getElementById('sign').style.visibility="hidden";	
+}
+}
+
+function signup(showhide){
+if(showhide == "show"){
+    document.getElementById('sign').style.visibility="visible";
+	document.getElementById('popupbox').style.visibility="hidden";
+}else if(showhide == "hide"){
+    document.getElementById('popupbox').style.visibility="visible";
+    document.getElementById('sign').style.visibility="visible";	
+}
+}
+
+</script>
+</head>
+<body >
+<div id="popupbox" class="acd" style="border:4px solid grey;background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg')">
+ 
+<ul>
+<a id="login" href="javascript:login('show');"><li class="l1">LOGIN</li></a>
+<a id="login" href="javascript:signup('show');"><l class="l2">SIGN UP</li></a>
+<ul>
+<br />
+<div class="imgcontainer">
+<img src="avatar.jpg" alt="Avatar" class="avatar">
+</div>
+<br />
+<div id="c"> 
+<form name="login" action="" method="post">
+<label style="color:white;"><b>Username:</b></label>
+ <input type="text" placeholder="Enter Username" name="uname" required>
+<label style="color:white;"><b>Password:</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required>
+
+<input type="checkbox" checked="checked"><label style="color:white;">Remember me</label><br />	
+<br />
+</div>
+<input id="a" type="submit" name="submit" value="login" style="margin-left:0px;"/>
+</form>
+
+<a style="margin-right:40px;" href="javascript:login('hide');"><input id="b" type="button" value="close"></a> 
+</div> -->
+
+<!-- sign up-->
+<div id="sign" class="acd" style="border:4px solid grey;background-image:url('black_texture_texture_background_06_hd_pictures_169901.jpg')">
+<ul>
+<a id="login" href="javascript:login('show');"><li class="l1">LOGIN</li></a>
+<a id="login" href="javascript:signup('show');"><l class="l2">SIGN UP</li></a>
+<ul>
+<br />
+
+<div style=" height:340px;width:250px; margin-left:-55px;">
+<form>
+<b style="color:white;">NAME</b>
+<input type="text" placeholder="First Name"  value="{{
+          request.form.username }}" required>
+<b style="color:white;">LAST NAME</b>
+<input type="text" placeholder="Last Name" required>
+<b style="color:white;">EMAIL</b>
+<input type="text" placeholder="abc@example.com" required>
+<b style="color:white;">PASSWORD</b>
+<input type="Password" placeholder="Atleast 6 characters" value="{{
+          request.form.password }}" required>
+<br />
+<input type="radio" name="gender" checked="checked"><label style="color:white;">Male</label></input>
+<input type="radio" name="gender"><label style="color:white;">Female</label</input>
+
+</div>
+<input id="bcd" type="submit" name="submit" value="Sign up"/>
+</form>
+<a  href="javascript:login('hide');"><input id="b" type="button" value="close"></a> 
+
+
+</div>
+
+<p><a href="javascript:login('show');">login</a></p>
+
+
+
+</body>
+</html>

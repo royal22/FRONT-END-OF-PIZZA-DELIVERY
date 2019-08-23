@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+<title>Pranzo Pizza-Online Ordering,Dining,Take-Away,Pizza Restaurant India</title>
+<style>
+body{
+margin-left:155px;
+margin-right:155px;
+background-color:#660000;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+li {
+    float: left;
+	border-right: 10px solid rgb(196, 4, 4);	//border divider
+   	
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	background-color:black;
+	font-size:20px;
+	 border-radius:10px 10px 10px 10px;
+}
+
+li a:hover {
+    color:red;
+	background-color:white;
+}
+
+div {
+    background-color:white;
+    width: 900px;
+	height: 400px;
+	position: relative;
+   
+    padding: 25px 25px 25px 25px;
+    margin: 25px 25px 25px 25px;
+	border-radius:10px 10px 10px 10px;
+}
+
+#asd
+{
+    background-color:#d90000;
+    width: 900px;
+	height: 400px;
+   
+    padding: 25px 25px 25px 25px;
+    margin: 25px 25px 25px 25px;
+	border-radius:10px 10px 10px 10px;
+}
+
+.ab{
+  background-color: rgb(196, 4, 4);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#fr{
+position:relative;
+}
+
+.abc{
+			   width:270px;
+			   height:60px;
+			   
+			    position: absolute;
+               top: 200px;
+               right: 0;
+			
+			}
+								
+			img{
+			
+			  display:inline;
+			  height:50px;
+			  width:50px;
+			  margin 2px;
+			}
+.xyz{
+ width:200px;
+			   height:10px;
+			   
+			    position: absolute;
+               top: 150px;
+               right: 0;
+}			
+#une{
+width: 300px;
+	height: 0px;
+	background-color:  white;
+	
+	position:absolute;
+	bottom:50px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="homepage.html" style="text-decoration:none;"><p style="color:white;margin-left:10px;font-size:35px;"><b><i>Pranzo Pizza</i></b></p></a>  <!-- add homepage link-->
+
+<!--<ul>
+  <li><a class="active" href="pizza">pizza</a></li>
+  <li><a href="sides">Sides & more</a></li>
+  <li><a href="desserts">Desserts and drinks</a></li>
+  <li><a href="combos">combos</a></li>
+</ul>-->
+<div id="asd">
+<div id="fr">
+<h1 style="color:rgb(196, 4, 4);"><em><strong>FEEDBACK</strong></em></h1>
+<h3 style="color:red;">LET US KNOW YOUR EXPERIENCE WITH PRANZO PIZZA<b></h3>
+<h5>We value your opinion and welcome your feedback. Kindly fill the appropriate form.</h5>
+<font color='red'> <DIV id="une"> </DIV> </font>
+<form   name="myForm"   onClick="return validate();">
+<label><input type="radio" name="feed" >I had an satisfactory experience</label><br /><br />
+<label><input type="radio" name="feed">I had great experience</label><br />
+<br />
+<br />
+<strong>City</strong>:
+  <select name="city" id="city_id" class="required">
+<option value="">Select City</option>
+<option value="3">Ahmedabad</option>
+<option value="47">Bangalore</option>
+<option value="29">Delhi</option>
+<option value="31">Mumbai</option>
+<option value="7">Kolkata</option>
+</select>
+
+
+<div class="abc">
+		<img src="s.png" id="star_0"/>
+		<img src="s.png" id="star_1"/>
+		<img src="s.png" id="star_2"/>
+		<img src="s.png" id="star_3"/>
+		<img src="s.png" id="star_4"/>
+</div>
+
+<div class="xyz">
+<h3 style="color:red"><b>RATE US<b></h3>
+</div>
+
+<br />
+<br />
+
+</form>
+<p align="center">
+<a href="feedback2.html"><input type="button" name="next" value="next" class="ab"></a>
+<p>
+</div>
+</div>
+
+
+<script>
+			var obj={
+				// we are gettig refernce of all images in stars
+				stars:document.querySelectorAll("img") ,
+				listener:function()
+				{
+					for(var i=0;i<obj.stars.length;i++)
+					{
+						obj.stars[i].addEventListener("mouseover",obj.glow,false); // e.target means from which refernece we have called
+						//vars index=obj.getIndex(e.target);
+						obj.stars[i].addEventListener("mouseout",obj.unglow,false);
+						obj.stars[i].addEventListener("click",obj.rate,false);
+					}
+				},
+				unglow:function(e)
+				{
+					var index=obj.getIndex(e.target); // e.target is the star on which aour mouse was there
+					for(var i=0;i<=index;i++)
+					{
+						obj.stars[i].src="s.png";
+					}
+				},
+				glow:function(e)
+				{
+					e.target.src="s1.png"; // so we have to change the src from which stars
+					var index=obj.getIndex(e.target); // e.target is the star on which aour mouse was there
+					for(var i=0;i<index;i++)
+					{
+						obj.stars[i].src="s1.png";
+					}
+				},
+				rate:function(e)
+				{
+					//obj.glow(e);
+					for(var i=0;i<obj.stars.length;i++)
+					{
+						obj.stars[i].removeEventListener("mouseover",obj.glow,false); // e.target means from which refernece we have called
+						//vars index=obj.getIndex(e.target);
+						obj.stars[i].removeEventListener("mouseout",obj.unglow,false);
+						obj.stars[i].removeEventListener("click",obj.rate,false);
+					}
+				},
+				getIndex:function(star) // star is the star on whcih my mouse was there
+				{
+					for(var i=0;i<obj.stars.length;i++)
+					{
+						if(star.id == obj.stars[i].id)
+						{
+							return i;
+						}
+					}
+					return -1;
+				}
+			}	
+			obj.listener();
+			function validate()
+				{  
+	     
+			 var genders = document.getElementsByName("feed");  
+	      
+		 if( document.myForm.city.value =="" )
+         {
+            document.getElementById('une').innerHTML = "*City field should not be empty";
+  //registerationform.unametxt.focus();
+  return(false);
+				}
+				if ( ( genders[0].checked == false ) && ( genders[1].checked == false ) )
+				{
+				document.getElementById('une').innerHTML = "*Experience field should not be empty";
+				//alert ( "Please choose your Gender: Male or Female" ); 
+				return false;
+				}
+           
+
+	}
+	</script>
+
+
+
+</body>
+</html>

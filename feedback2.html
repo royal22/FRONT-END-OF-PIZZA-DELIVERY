@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+<img src="">
+<title>Pranzo Pizza-Online Ordering,Dining,Take-Away,Pizza Restaurant India</title>
+<style>
+body{
+margin-left:155px;
+margin-right:155px;
+background-color:#660000;
+}
+
+div {
+    background-color:white;
+    width: 950px;
+	height: 660px;
+   position:relative;
+    padding: 25px 25px 25px 25px;
+    margin: 25px 25px 25px 25px;
+	border-radius:10px 10px 10px 10px;
+}
+
+.a{
+background-color:  #F0F0F0;
+    width: 920px;
+	height: 630px;
+	position:relative;
+    border:1px solid black;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+}
+table{
+padding:20px 20px;
+
+
+position:absolute;
+top:35px
+}
+
+
+#une{
+    width:700px;
+	height:0%;
+	position:absolute;
+top:-24px;
+	background-color:  #F0F0F0; 
+
+}
+
+</style>
+</head>
+<body>
+
+
+<p style="color:white;margin-left:10px;font-size:35px;"><b><i>Pranzo Pizza</i></b></p>
+
+<div>
+
+<div class="a" id="fr">
+
+<table>
+
+<font color='red'> <DIV id="une"> </DIV> </font>
+
+<form name="myForm"   onsubmit="return validate();">
+<br />
+<tr>
+<td>(*)as mandatory field</td> 
+</tr>
+
+<tr>
+<td width="45%"><b>Customer Name(*)</b></td>
+<td>:</td> 
+<td><input type="text" name="Name" required></td>
+</tr>
+
+<tr>
+<td width=45%><b>Email(*)</b></td> 
+<td>:</td>
+<td><input type="email" name="Email" required></td>
+</tr>
+
+<tr>
+<td width=45%><b>Mobile No.(*)</b></td>
+<td>:</td>
+<td>+91 <input type="tel" name="Phone" required></td>
+</tr>
+
+<tr>
+<td width=45%><b>Gender(*)</b></td>
+<td>:</td>
+<td>
+<select name="Gender">
+<option value="">Select Gender</option>
+<option value="1"> Male </option>
+<option value="2"> Female </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Your preferred time of contact</b></td>
+<td>:</td>
+<td>
+<select name="Time">
+<option>Choose Time</option>
+<option> 11am-3pm </option>
+<option> 3-7pm</option>
+<option> after 7pm</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td width=45%>
+<b>Date of visit(dd/mm/yyyy)</b></td>
+<td>:</td>
+ <td> <input type="tel" ></td>
+</tr>
+
+<tr>
+<td width=45%><b>Time of visit</b></td>
+<td>:</td>
+<td>
+<input type="radio" name="time" > 11am-3pm  <input type="radio" name="time" > 3-7pm <input type="radio" name="time"> after 7pm
+</td>
+</tr>
+
+<tr>
+<td><b>Your feedback(*)</b></td>
+<td>:</td>
+<td><textarea rows="10" cols="20" name="Feed"></textarea></td>
+</tr>
+
+<tr>
+<td width=45%><b>How often do you visit pranzo pizza</b></td>
+<td>:</td>
+<td><input type="radio" name="g"/> weekly   
+<input type="radio" name="g"/> Monthly  
+<input type="radio" name="g" /> Ocassionaly
+<input type="radio" name="g" /> This is my first visit</td>
+</tr>
+
+<tr>
+<td width=45%><b>Was the restauarant clean?</b></td>
+<td>:</td>
+<td>
+<select name="marital status">
+<option> yes </option>
+<option> no </option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Was the service hospitable and freindly? </b></td>
+<td>:</td>
+<td><input type="radio" name="f"/> yes  <input type="radio" name="f"/> no
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Did you receive what you ordered?</b></td>
+<td>:</td>
+<td><input type="radio" name="e"/> yes  <input type="radio" name="e"/> no
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Was the restauarnt well maintained?</b><width=45%>
+<td>:</td>
+<td><input type="radio" name="d"/> yes  <input type="radio" name="d"/> no
+
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Was the food to your liking?</b></td>
+<td>:</td>
+<td><input type="radio" name="c"/> yes  <input type="radio" name="c"/> no
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Were you served speedily?</b></td>
+<td>:</td>
+<td><input type="radio" name="b"/> yes  <input type="radio" name="b"/> no
+</td>
+</tr>
+
+<tr>
+<td width=45%><b>Will you visit pranzo pizza again?</b></td>
+<td>:</td>
+<td>
+<input type="radio" name="a"/> yes  <input type="radio" name="a"/> no
+</td>
+</tr>
+
+
+
+<tr>
+<td align="center" >
+<input type="submit" value="submit">
+
+<a href="feedback.html"><input type="button" name="back" value="back" /></a>
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+</div>
+
+
+<script>
+
+function validate()
+      {  
+	     
+		 if( isNaN(document.myForm.Phone.value) || document.myForm.Phone.value.length<10)
+         {
+             document.getElementById('une').innerHTML = "Enter Numeric value only and length should be 10";
+		  	
+            //document.myForm.Name.focus() ;
+            return (false);
+         }
+		 
+		 if( document.myForm.Gender.value =="" )
+         {
+             document.getElementById('une').innerHTML ="Please provide your gender.";
+		    
+            return false;
+         }
+         if( document.myForm.Feed.value == "")
+         {
+             document.getElementById('une').innerHTML ="Please enter Your Feedback";
+		    		
+            //document.myForm.Name.focus() ;
+            return false;
+         }
+		 
+		 if(!isNaN(document.myForm.Name.value))
+         {
+             document.getElementById('une').innerHTML = "Name can't be a number";
+		    
+			
+            //document.myForm.Name.focus() ;
+            return false;
+         }
+        
+
+        
+      }
+</script>
+</body>
+</html>
